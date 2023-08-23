@@ -1,4 +1,4 @@
 class Admin::DashboardController < ApplicationController
-  def show
-  end
+  include RestrictAccess
+  def show; end
 end
