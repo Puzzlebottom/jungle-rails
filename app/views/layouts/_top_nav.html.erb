@@ -42,13 +42,11 @@
           <%# </ul>
         </li> %>
       </ul>
-      <ul class="navbar-nav mx-4">
-        <%= link_to about_path, class: "nav-link" do %> About <% end %>
-      </ul>
       <ul class="navbar-nav">
+      <%= link_to 'about', class: "nav-link" do %> About <% end %>
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle text-danger"
+            class="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdownAdmin"
             role="button"
@@ -67,7 +65,12 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
-      </ul>
+        <% if user_logged_in? %>
+          <%= link_to 'logout', class: "nav-link" do %> Logout <% end %>
+        <% else %>
+          <%= link_to 'login', class: "nav-link" do %> Login <% end %>
+        <% end %>
+        <%= link_to 'register', class: "nav-link" do %> Register <% end %>
     </div>
   </div>
 </nav>

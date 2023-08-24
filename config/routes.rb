@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'about#index'
 
-  get '/signup', to: 'users#new'
+  get '/register', to: 'users#new'
   post '/users', to: 'users#create'
 
   get '/login', to: 'sessions#new'
