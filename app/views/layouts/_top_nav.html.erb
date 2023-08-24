@@ -43,7 +43,7 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
-      <%= link_to 'about', class: "nav-link" do %> About <% end %>
+      <%= link_to about_path, class: "nav-link" do %> About <% end %>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -66,11 +66,11 @@
           My Cart (<%= cart.size %>) <% end %>
         </li>
         <% if user_logged_in? %>
-          <%= link_to 'logout', class: "nav-link" do %> Logout <% end %>
+          <%= link_to logout_path, class: "nav-link" do %> Logout <% end %>
         <% else %>
-          <%= link_to 'login', class: "nav-link" do %> Login <% end %>
+          <%= link_to login_path, class: "nav-link" do %> Login <% end %>
         <% end %>
-        <%= link_to 'register', class: "nav-link" do %> Register <% end %>
+        <%= link_to register_path, class: "nav-link" do %> Register <% end %>
     </div>
   </div>
 </nav>
