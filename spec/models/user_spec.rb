@@ -165,4 +165,72 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    it 'should return a user object if the credentials are valid' do
+      @user = User.new(
+        first_name: 'Albus',
+        last_name: 'Dumbleedoo',
+        email: 'headmaster@hogwarts.wiz',
+        password: 'grindelwald',
+        password_confirmation: 'grindelwald'
+      )
+      @user.save
+
+      @authenticated_user = User.authenticate_with_credentials('headmaster@hogwarts.wiz', 'grindelwald')
+
+      expect(@authenticated_user).to be_a User
+    end
+
+    it 'should return nil if the user does not exist' do
+      @authenticated_user = User.authenticate_with_credentials('halfblood.prince@yahoo.com', 'lilyevans')
+
+      expect(@authenticated_user).to be_nil
+    end
+
+    it 'should return nil if the password is incorrect' do
+      @user = User.new(
+        first_name: 'Albus',
+        last_name: 'Dumbleedoo',
+        email: 'headmaster@hogwarts.wiz',
+        password: 'grindelwald',
+        password_confirmation: 'grindelwald'
+      )
+      @user.save
+
+      @authenticated_user = User.authenticate_with_credentials('headmaster@hogwarts.wiz', 'dancelikenobodyswatching')
+
+      expect(@authenticated_user).to be_nil
+    end
+
+    it 'should trim whitespace from email' do
+      @user = User.new(
+        first_name: 'Albus',
+        last_name: 'Dumbleedoo',
+        email: 'headmaster@hogwarts.wiz',
+        password: 'grindelwald',
+        password_confirmation: 'grindelwald'
+      )
+      @user.save
+
+      @authenticated_user = User.authenticate_with_credentials('   headmaster@hogwarts.wiz   ', 'grindelwald')
+
+      expect(@authenticated_user).to be_a User
+    end
+
+    it 'should validate email case insensitively' do
+      @user = User.new(
+        first_name: 'Albus',
+        last_name: 'Dumbleedoo',
+        email: 'Headmaster@hogwarts.wiz',
+        password: 'grindelwald',
+        password_confirmation: 'grindelwald'
+      )
+      @user.save
+
+      @authenticated_user = User.authenticate_with_credentials('HEADMASTER@HOGWARTS.WIZ', 'grindelwald')
+
+      expect(@authenticated_user).to be_a User
+    end
+  end
 end
