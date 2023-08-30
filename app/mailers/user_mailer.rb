@@ -4,6 +4,6 @@ class UserMailer < ApplicationMailer
   def confirmation_email
     @user = params[:user]
     @order = params[:order]
-    mail(to: @user.email, subject: "Order ##{@order.id} confirmation")
+    mail(to: @order.email, subject: "Order ##{@order.id} confirmation")
   end
 end

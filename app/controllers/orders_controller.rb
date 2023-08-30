@@ -6,11 +6,12 @@ class OrdersController < ApplicationController
   def create
     charge = perform_stripe_charge
     order = create_order(charge)
-    @user = User.find(session)
+    user_id = session[:user_id]
+    @user = user_id && User.find(user_id)
 
     if order.valid?
       empty_cart!
-      UserMailer.with(user: @user, order:).confirmation_email.deliver_now
+      UserMailer.with(order:).confirmation_email.deliver_now
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }

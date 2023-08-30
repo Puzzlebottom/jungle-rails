@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Thank you for your order, <%= @user.first_name %>!</h1>
+    <h1>Thank you for your order, <%= @user ? @user.first_name : 'guest' %>!</h1>
     <h3>Order Summary</h3>
     <table>
       <thead>
