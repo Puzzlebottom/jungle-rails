@@ -3,7 +3,7 @@ describe('homepage', () => {
     cy.visit('/');
   });
   it('should load the homepage', () => {
-    cy.get('.title').should('exist');
+    cy.get('.title > h1').should('contain.text', 'The Jungle');
   });
 
   it("There is products on the page", () => {
