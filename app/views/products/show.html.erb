@@ -44,7 +44,7 @@
       <%= form.submit 'Submit Review', class: 'btn btn-primary' %>
     <% end %>
     <div>
-      <% @product.reviews.each do |review| %>
+      <% @product.reviews.order('created_at DESC').each do |review| %>
         <div><%= review.description %></div>
         <div><%= review.rating.to_i %></div>
       <% end %>
