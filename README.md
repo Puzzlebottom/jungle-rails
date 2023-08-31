@@ -30,4 +30,61 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - PostgreSQL 9.x
 - Stripe
 
-Use the rubric to layout features.
+## Features
+
+### Sold Out Badge
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/sold-out-badge.png?raw=true" alt="a screenshot of the sold out badge" height="60%" width="60%">
+
+### Admin Functionality
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/admin-authorization.png?raw=true" alt="a screenshot of the admin authorization modal" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/admin-categories-page.png?raw=true" alt="a screenshot of the admin categories page" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/admin-products-page.png?raw=true" alt="a screenshot of the admin products page" height="60%" width="60%">
+
+### User Authentication
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/nav-bar.png?raw=true" alt="a screenshot of the nav-bar" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/login-form.png?raw=true" alt="a screenshot of the login form" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/password-digest.png?raw=true" alt="a screenshot of passwords being stored as a secure digest" height="60%" width="60%">
+
+### Ordering
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/cart-with-total.png?raw=true" alt="a screenshot of a cart showing the order total" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/empty-cart.png?raw=true" alt="a screenshot of an empty cart" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/guest-checkout.png?raw=true" alt="a screenshot of the guest checkout modal" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/order-confirmation-msg.png?raw=true" alt="a screenshot of an order confirmation message" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/order-confirmation-email.png?raw=true" alt="a screenshot of an order confirmation email preview" height="60%" width="60%">
+
+### Testing
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/feature-specs-passing.png?raw=true" alt="a screenshot of passing feature specs" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/e2e-tests-add-to-cart.png?raw=true" alt="a screenshot of passing end to end tests in cypress" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/e2e-tests-homepage.png?raw=true" alt="a screenshot of passing end to end tests in cypress" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/e2e-tests-login-registration.png?raw=true" alt="a screenshot of passing end to end tests in cypress" height="60%" width="60%">
+
+<img src="https://github.com/Puzzlebottom/jungle-rails/blob/feature/documentation/docs/e2e-tests-product-details-page.png?raw=true" alt="a screenshot of passing end to end tests in cypress" height="60%" width="60%">
+
+
+
+
+
+
+
+
+
+
+
+
+
